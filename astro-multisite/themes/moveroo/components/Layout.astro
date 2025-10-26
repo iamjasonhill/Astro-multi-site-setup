@@ -1,0 +1,25 @@
+---
+import Meta from '@again/seo-core/components/Meta.astro';
+import Schema from '@again/seo-core/components/Schema.astro';
+import { org, website } from '@again/seo-core/lib/schema';
+import theme from '../theme.config';
+const { title, description, canonical, ogImage, siteUrl } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <Meta
+      title={title}
+      description={description}
+      canonical={canonical}
+      ogImage={ogImage ?? theme.defaultOg}
+      siteName={theme.brand}
+      locale="en_AU" />
+    <Schema data={[
+      org({ name: theme.brand, url: siteUrl, logo: `${siteUrl}/logo.svg`, phone: theme.phone }),
+      website({ url: siteUrl, searchUrl: `${siteUrl}/search` })
+    ]} />
+  </head>
+  <body class="min-h-screen">
+    <slot />
+  </body>
+</html>

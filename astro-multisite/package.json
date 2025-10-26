@@ -1,0 +1,16 @@
+{
+  "name": "astro-multisite",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "check": "tsc -b --pretty",
+    "dev:site": "node ./scripts/site-run.js dev",
+    "build:site": "node ./scripts/site-run.js build",
+    "preview:site": "node ./scripts/site-run.js preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^20.16.5"
+  }
+}
