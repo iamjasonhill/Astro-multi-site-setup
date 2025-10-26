@@ -1,0 +1,8 @@
+{
+  "name": "@again/theme-moveroo",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "@again/seo-core": "workspace:*"
+  }
+}
